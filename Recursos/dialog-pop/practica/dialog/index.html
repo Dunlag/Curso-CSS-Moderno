@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dialog</title>
+    <link rel="stylesheet" href="./estilos.css">
+</head>
+<body>
+
+    <button class="btn">Abrir modal</button>
+
+    <dialog class="modal">
+
+        <h2 class="modal__title">¡Soy un modal!</h2>
+
+        <img src="./illustration.svg" class="modal__img">
+
+        <button class="modal__close">X</button>
+
+    </dialog>
+
+
+    <script>
+        const modal = document.querySelector(".modal");
+        const btnOpen = document.querySelector(".btn");
+        const btnClose = document.querySelector(".modal__close");
+
+        btnOpen.addEventListener("click", ()=>{
+
+            modal.showModal();
+
+        });
+
+        btnClose.addEventListener("click", ()=>{
+
+            modal.close();
+
+        });
+
+
+    </script>
+    
+</body>
+</html>

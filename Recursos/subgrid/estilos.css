@@ -1,0 +1,83 @@
+*, ::after, ::before{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: "Plus Jakarta Sans", sans-serif;
+    
+}
+
+.grid{
+    margin: 80px auto;
+    width: min(90%, 1200px);
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: repeat(4, max-content);
+}
+
+.article{
+    grid-row: 1/-1;
+    display: grid;
+    grid-template-rows: subgrid;
+    gap: 1rem;
+}
+
+.article__img{
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.article__btn{
+    align-self: start;
+    background-color: black;
+    color: white;
+    text-decoration: none;
+    padding: 1rem 2rem;
+    text-align: center;
+    border-radius: 6px;
+}
+
+
+
+/*
+.grid{
+    margin: 80px auto;
+    width: min(90%, 800px);
+    border: 4px solid burlywood;
+    border-radius: 10px;
+
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(4,120px);
+    grid-template-areas:
+    "area1 area1 area1 area1 area1"
+    "area2 area2 area3 area3 area3"
+    "area4 area4 area5 area5 area5"
+    "area6 area6 area6 area6 area6";
+}
+
+.child-grid{
+    background-color: teal;
+    grid-column: 2 / span 3;
+    grid-row: 2 / span 2;
+
+    display: grid;
+    gap: 0;
+    grid-template-columns: subgrid ;
+    grid-template-rows: subgrid;
+}
+
+.element1{
+    grid-area: area5;
+    background-color: royalblue;
+}
+
+.element2{
+    background-color: crimson;
+}
+*/
+

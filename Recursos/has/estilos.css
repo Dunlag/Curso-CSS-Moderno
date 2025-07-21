@@ -1,0 +1,104 @@
+*, ::after, ::before{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+/* Contenedor */
+
+.contenedor{
+    margin: 80px ;
+
+    &:has(h1){
+        background-color: seagreen;
+    }
+
+}
+
+
+
+img{
+    width: 300px;
+}
+
+
+
+
+
+
+
+
+/* Cards */
+
+.cards{
+    margin: 80px;
+    display: grid;
+    gap: 2rem;
+}
+
+.card{
+    overflow: hidden;
+    border-radius: 6px;
+    text-align: center;
+    width: 300px;
+    padding: 2rem;
+    background-color: #ccf5f5;
+    box-shadow: 0 0 6px -3px;
+}
+
+.card:has( .card__img--large ){
+    background-color: teal;
+    padding: 0;
+    padding-bottom: 2rem;
+}
+
+.card__img{
+    display: block;
+    margin: 0 auto;
+    width: 100px;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.card__img--large{
+    aspect-ratio: unset;
+    width: 100%;
+    height: 200px;
+    border-radius: 0px;
+}
+
+.card__title{
+    margin-top: 1.4rem;
+}
+
+/* Form */
+
+.form{
+    margin: 300px auto;
+    width: min(600px, 90%);
+    padding: 3rem 1.5rem;
+    border: 4px solid cornflowerblue;
+
+    
+}
+
+/*
+.form:has(> input:checked, [type="email"]:focus,  [type="email"]:placeholder-shown ){
+    background-color: seagreen;
+}
+*/
+
+.form input{
+    display: inline-block;
+    font: inherit;
+}
+
+/*
+[type="email"]:has(~ [type="checkbox"]:checked){
+    background-color: crimson;
+}
+*/
