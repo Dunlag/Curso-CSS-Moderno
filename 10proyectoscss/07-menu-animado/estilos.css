@@ -1,0 +1,69 @@
+*, ::after, ::before{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.menu-animacion{
+    --translate-linea1: 0 -8px;
+    --translate-linea3: 0 8px;
+
+    --rotate-linea1: 0;
+    --rotate-linea3: 0;
+
+    --opacity-linea3: 1;
+
+    --transicion-lineas: translate .4s .4s , rotate .4s, opacity .4s .4s;
+   
+    scale: 3;
+
+    width: max-content;
+    height: 30px;
+    border: none;
+    padding: 0;
+    margin: 130px auto;
+    
+
+    display: grid;
+    align-content: center;
+    grid-template-areas: "lineas";
+
+    cursor: pointer;
+    background-color: transparent;
+}
+
+.menu-animacion:hover{
+    --translate-linea1: 0 0;
+    --translate-linea3: 0 0;
+
+    --rotate-linea1: 45deg;
+    --rotate-linea3: -45deg;
+
+    --opacity-linea3: 0;
+
+    --transicion-lineas: translate .4s, rotate .4s .4s, opacity .4s;
+}
+
+.linea{
+    grid-area: lineas;
+    background-color: #000;
+    width: 30px;
+    height: 4px;
+    border-radius: 10px;
+
+    transition: var(--transicion-lineas);
+}
+
+
+.linea-1{
+    translate: var(--translate-linea1);
+    rotate: var(--rotate-linea1);
+}
+
+.linea-2{
+    opacity: var(--opacity-linea3);
+}
+
+.linea-3{
+    translate: var(--translate-linea3);
+    rotate: var(--rotate-linea3);
+}

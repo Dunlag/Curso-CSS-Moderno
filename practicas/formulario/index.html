@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Efecto Google de formularios</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="wrapper">
+    <h1 class="title">Formulario básico</h1>
+
+    <form class="form">
+      <label for="name" class="label">
+        <input type="text" placeholder=" " class="input" id="name" name="name" required>
+        <span class="label__name">Nombre completo</span>
+      </label>
+
+      <label for="email" class="label">
+        <input type="email" placeholder=" " class="input" id="email" name="email" required>
+        <span class="label__name">Correo electrónico</span>
+      </label>
+
+      <label for="phone" class="label">
+        <input type="tel" placeholder=" " class="input" id="phone" name="phone" pattern="[0-9+\-\s]{7,}" required>
+        <span class="label__name">Teléfono</span>
+      </label>
+
+
+
+      <div class="form__actions">
+        <button type="reset" class="btn btn--secondary">Limpiar</button>
+        <button type="submit" class="btn btn--primary">Enviar</button>
+      </div>
+    </form>
+  </main>
+</body>
+</html>

@@ -1,0 +1,135 @@
+*,
+::after,
+::before {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 80px;
+    font-family: "Plus Jakarta Sans", sans-serif;
+    color: #111827; /* High contrast body text for SEO/accessibility */
+}
+
+.wrapper {
+    width: min(640px, 100%);
+    margin: 0 auto;
+    padding: 48px 32px;
+    border: 1px solid #e5e7eb;
+    border-radius: 16px;
+    box-shadow: 0 18px 36px rgba(0,0,0,.06);
+}
+
+.title {
+    margin: 1rem 0;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.wrapper :is(h2,h3,h4,h5, span){
+    color: #111827;
+}
+
+.title:is(:hover, :active){
+    transform: scale(1.2);
+}
+
+
+.form{
+    display: grid;
+    gap: 1.25rem;
+    width: 100%;
+}
+
+.form__actions{
+    display: flex;
+    gap: 1rem;
+    justify-content: flex-end;
+}
+
+.label {
+    display:grid;
+    grid-template-areas: "input";
+}
+
+.label__name {
+    grid-area: input;
+
+    width: max-content;
+    z-index: 100;
+    margin-left: 1rem;
+    padding: 0 .35rem;
+    align-self: center;
+
+    transition: transform .2s;
+    transform-origin: center left;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.input{
+    grid-area: input;
+
+    width: 100%;
+    font: inherit;
+    border-radius: 10px;
+    border: 1px solid gray;
+    padding: .7rem 1.5rem;
+
+    transition: border-color .2s, box-shadow .2s;
+}
+
+
+.input:where(:focus, :not(:placeholder-shown), :valid) + .label__name{
+    transform: translateY(-50%) scale(.7);
+    background-color: white;
+    border-radius: 6px;
+}
+
+.input:focus{
+    outline: none;
+    border-color: #1d4ed8; /* Blue-700 */
+    box-shadow: 0 0 0 3px rgba(29, 78, 216, .25);
+}
+
+.input--textarea{
+    min-height: 140px;
+    resize: vertical;
+}
+
+.btn{
+    padding: .85rem 1.5rem;
+    border-radius: 12px;
+    border: 1px solid transparent;
+    font-weight: 700;
+    cursor: pointer;
+    transition: transform .15s ease, box-shadow .2s ease, border-color .2s ease, background-color .2s ease;
+}
+
+.btn--secondary{
+    background: #ffffff;
+    border-color: #1f2937; /* Gray-800 outline for contrast */
+    color: #1f2937;
+}
+
+.btn--primary{
+    background: #1d4ed8; /* Blue-700 */
+    color: #ffffff;
+    box-shadow: 0 12px 30px rgba(29,78,216,.25);
+}
+
+.btn:hover{
+    transform: translateY(-2px);
+}
+
+.btn--secondary:hover{
+    background: #f8fafc;
+    border-color: #111827;
+    box-shadow: 0 10px 24px rgba(0,0,0,.06);
+}
+
+.btn--primary:hover{
+    background: #1e40af; /* Blue-800 */
+    box-shadow: 0 16px 34px rgba(29,78,216,.3);
+}

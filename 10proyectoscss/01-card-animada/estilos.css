@@ -1,0 +1,94 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: "Poppins", sans-serif;
+    padding: 80px 0;
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fit, min(100%, 300px));
+    justify-content: center;
+}
+
+.card{
+    width: 300px;
+    display: grid;
+    grid-template-rows: 150px 1fr;
+    position: relative;
+    cursor: pointer;
+
+    color: white;
+    background-color: #0080FF;
+    box-shadow: 0 0 6px rgb(0 0 0 / 5);
+    padding: 1rem;
+
+    --columns: 1fr max-content 1fr;
+    --clippy-image: circle(0% at top right);
+    --transform: unset;
+    --opacity: 0;
+}
+
+.card--batman{
+    background-color: #0D160B;
+}
+
+.card--iron{
+    background-color: #2c325f;
+}
+
+.card:hover{
+    --clippy-image:  circle(75% at top right);
+    --transform:  scale(.65) translateY(-20px);
+    --columns: 0fr max-content 1fr;
+    --opacity: 1;
+}
+
+.card__figure{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 80%;
+    aspect-ratio: 1/1;
+  
+    clip-path: var(--clippy-image);
+    transition: clip-path .8s;
+}
+
+
+
+.card__img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card__name{
+    position: absolute;
+    inset: 0;
+    padding: 1rem;
+    display: grid;
+    grid-template-columns: var(--columns);
+    grid-template-areas: ". title .";
+    place-items: center;
+    transition: grid-template-columns .8s;
+}
+
+.card__title{
+    font-size: 2.5rem;
+    transform-origin: left;
+    transform:var(--transform);
+    grid-area: title;
+    transition: .8s transform;
+}
+
+
+.card__text{
+    opacity: 1;
+    z-index: 10;
+    grid-row: 2/3;
+    opacity: var(--opacity);
+    transition: opacity .5s;
+    padding-top: 20px;
+}

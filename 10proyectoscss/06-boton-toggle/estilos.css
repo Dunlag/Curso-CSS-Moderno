@@ -1,0 +1,51 @@
+*,
+::after,
+::before {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.switch{
+    scale: 2;
+
+    display: block;
+    width: 100px;
+    cursor: pointer;
+
+    margin: 100px auto;
+    border: 2px solid #cdd2ea;
+    box-shadow: 0 0 10px -4px #275efe;
+    border-radius: 1000px;
+
+    --color-input: #bbc1e1;
+    --translate-input: translate(0);
+
+    transition: background-color .3s;
+}
+
+.switch:has(.switch__input:checked){
+    background-color: #275efe;
+    --color-input: white;
+    --translate-input: translate(150%);
+}
+
+.switch__container{
+    display: block;
+    width: 100%;
+    padding: 7%;
+}
+
+.switch__input{
+    appearance: none;
+    background-color: var(--color-input);
+
+    display: block;
+    width: 40%;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+
+    cursor: pointer;
+
+    transform: var(--translate-input);
+    transition: transform .4s;
+}

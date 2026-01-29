@@ -1,0 +1,94 @@
+*,
+::after,
+::before {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Plus Jakarta Sans", sans-serif;
+    height: 100vh;
+    background-image: linear-gradient(#a3c6fd, #b6dbf9);
+}
+
+input{
+    font: inherit;
+}
+
+.form{
+    margin: 40px auto;
+    padding: 3rem 1.5rem;
+    background-color: #fff;
+    width: min(350px, 90%);
+    border-radius: 10px;
+}
+
+.form__title{
+    font-size: 2rem;
+}
+
+.form__subtitle{
+    margin-top: .7rem;
+    color: #9c9999;
+}
+
+.form__inputs{
+    margin: 2rem 0 1.5rem;
+    display: grid;
+    gap: 1.5rem;
+    color: #6b6b6b;
+}
+
+.form__label{
+    width: 100%;
+    display: grid;
+    grid-template-areas: "input";
+}
+
+.form__input{
+    grid-area: input;
+
+    width: 100%;
+    border-radius: 10px;
+    border: 1px solid #d7d0d0;
+    padding: .7rem 1.5rem;
+    color: #6b6b6b;
+}
+
+
+.form__text{
+    grid-area: input;
+    z-index: 100;
+
+    width: max-content;
+    height: 100%;
+
+    margin-left: 1rem;
+    padding: 0 .5rem;
+
+    display: flex;
+    align-items: center;
+
+    transform-origin: left center;
+    transition: transform .3s;
+}
+
+.form__input:focus + .form__text,
+.form__input:not(:placeholder-shown) + .form__text{
+    background-color: white;
+    transform: translateY(-50%) scale(.7);
+}
+
+.form__submit{
+    display: inline-block;
+    border-radius: 10px;
+    background-color: #0f41e1;
+    padding: 1rem 2rem;
+    color: white;
+    border: none;
+}
+
+.form__submit:hover{
+    background-color: #567aea;
+    cursor: pointer;
+}
