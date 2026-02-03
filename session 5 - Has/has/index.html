@@ -3,73 +3,96 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Template</title>
+    <title>Guía interactiva de :has()</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./estilos.css">
+    <link rel="stylesheet" href="estilos.css">
 </head>
 <body>
+    <header class="hero">
+        <div class="hero__content">
+            <span class="hero__eyebrow">Guía interactiva</span>
+            <h1 class="hero__title">:has() en CSS</h1>
+            <p class="hero__text">
+                La pseudo-clase <strong>:has()</strong> permite seleccionar un elemento
+                <em>si contiene</em> otros elementos que cumplan una condición. Es como un
+                “padre” que reacciona a lo que hay dentro.
+            </p>
+        </div>
+    </header>
 
+    <main class="guide">
+        <section class="guide__section">
+            <h2>¿Qué hace exactamente?</h2>
+            <p>
+                Con <strong>:has()</strong> puedes aplicar estilos a un elemento basándote en la
+                presencia o el estado de sus hijos (por ejemplo, si hay un checkbox activado,
+                si un input está en foco, o si existe un elemento específico).
+            </p>
+            <div class="note">
+                <p><strong>Idea clave:</strong> seleccionas el <em>contenedor</em> mirando hacia adentro.</p>
+                <pre><code>.card:has(input:checked) { /* estilos */ }</code></pre>
+            </div>
+        </section>
 
-    <div class="contenedor">
+        <section class="guide__section">
+            <h2>Ejemplo 1: El contenedor cambia si hay un checkbox activo</h2>
+            <p>
+                Marca el checkbox. El estilo se aplica al contenedor completo porque
+                contiene un <code>input</code> activado.
+            </p>
 
-        <h1>¡Soy un H1!</h1>
+            <article class="demo-card">
+                <div class="demo-card__header">
+                    <span class="demo-card__badge">:has(.demo-toggle:checked)</span>
+                    <h3>Modo destacado</h3>
+                    <p>Activa el switch y observa cómo reacciona el padre.</p>
+                </div>
+                <label class="demo-switch">
+                    <input type="checkbox" class="demo-toggle">
+                    <span>Activar modo destacado</span>
+                </label>
+            </article>
+        </section>
 
-        <!-- <h2>Soy un h2</h2> -->
+        <section class="guide__section">
+            <h2>Ejemplo 2: La tarjeta cambia su imagen si el hijo está activo</h2>
+            <p>
+                Aquí el contenedor detecta el estado de un control interno y adapta el tamaño
+                de la imagen.
+            </p>
 
-        <p>Soy un parrafo</p>
+            <article class="profile-card">
+                <img src="https://images.unsplash.com/photo-1491349174775-aaafddd81942?q=80&w=1200&auto=format&fit=crop" alt="Retrato" class="profile-card__img">
+                <div class="profile-card__body">
+                    <h3>Jordan Rivera</h3>
+                    <p>Diseñador visual y fan de los micro-detalles.</p>
+                    <label class="demo-switch">
+                        <input type="checkbox" class="size-toggle">
+                        <span>Usar imagen grande</span>
+                    </label>
+                </div>
+            </article>
+        </section>
 
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ_qFS9ZMmIMfUsZh3aIHpBkzxRWWtCwuJGx0l2qwsrtsp6eygLgV3jWirCBEDhyRST60pr" class="spidy">
+        <section class="guide__section">
+            <h2>Ejemplo 3: Formulario que reacciona al foco y a la validez</h2>
+            <p>
+                Cuando haces foco en el input o el email es válido, el contenedor
+                cambia su aspecto gracias a <strong>:has()</strong>.
+            </p>
 
-    </div>
-
-    <div class="contenedor">
-
-        <h2>¡Soy un H2!</h2>
-
-        <img src="https://cdn.hobbyconsolas.com/sites/navi.axelspringer.es/public/media/image/2018/10/venom-comics.jpg?tf=3840x" class="venom">
-
-    </div>
-
-
-    <!--
-    <section class="cards">
-
-        <article class="card">
-
-            <img src="https://images.unsplash.com/photo-1491349174775-aaafddd81942?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="card__img card__img--large">
-
-            <h3 class="card__title">¡Mi nombre es Jordan!</h3>
-
-        </article>
-
-        <article class="card">
-
-            <img src="https://images.unsplash.com/photo-1491349174775-aaafddd81942?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="card__img">
-
-            <h3 class="card__title">¡Mi nombre es Jordan!</h3>
-
-        </article>
-
-    </section>
-   -->
-
-    <form class="form">
-
-        <input type="email" placeholder="Ingresa tu email" required>
-
-        <span></span>
-        <input type="checkbox" id="check">
-        <label for="check">
-
-            <span>
-                Aceptas terminos y condiciones
-            </span>
-        </label>
-
-
-    </form>
-
+            <form class="focus-card">
+                <label class="focus-card__label" for="email">Correo</label>
+                <input id="email" name="email" type="email" placeholder="tu@email.com" required>
+                <div class="focus-card__status">
+                    <span class="status status--idle">Escribe un correo válido.</span>
+                    <span class="status status--valid">¡Perfecto! Email válido.</span>
+                </div>
+                <button type="submit">Continuar</button>
+            </form>
+        </section>
+    </main>
 </body>
 </html>

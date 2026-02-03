@@ -1,104 +1,279 @@
-*, ::after, ::before{
+*,
+*::before,
+*::after{
     margin: 0;
     box-sizing: border-box;
 }
 
+:root{
+    color-scheme: light;
+    --bg: #f6f7fb;
+    --text: #1d2233;
+    --muted: #5b647a;
+    --accent: #3b82f6;
+    --accent-strong: #1e40af;
+    --card: #ffffff;
+    --border: #e3e7f0;
+    --success: #10b981;
+    --warning: #f59e0b;
+}
+
 body{
     font-family: "Plus Jakarta Sans", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
 }
 
-/* Contenedor */
+strong{
+    font-weight: 700;
+}
 
-.contenedor{
-    margin: 80px ;
+code{
+    background: #eef2ff;
+    color: #3730a3;
+    padding: 0.15rem 0.4rem;
+    border-radius: 0.35rem;
+    font-size: 0.95rem;
+}
 
-    &:has(h1){
-        background-color: seagreen;
+pre{
+    background: #0f172a;
+    color: #e2e8f0;
+    padding: 1rem 1.2rem;
+    border-radius: 0.75rem;
+    overflow-x: auto;
+    margin-top: 0.75rem;
+}
+
+.hero{
+    background: linear-gradient(135deg, #e0f2fe 0%, #dbeafe 45%, #eef2ff 100%);
+    padding: 4.5rem 1.5rem 3rem;
+}
+
+.hero__content{
+    max-width: 920px;
+    margin: 0 auto;
+    display: grid;
+    gap: 1rem;
+}
+
+.hero__eyebrow{
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+    font-size: 0.75rem;
+    color: var(--accent-strong);
+    font-weight: 700;
+}
+
+.hero__title{
+    font-size: clamp(2rem, 4vw, 3.5rem);
+    font-weight: 800;
+}
+
+.hero__text{
+    max-width: 700px;
+    color: var(--muted);
+    font-size: 1.05rem;
+}
+
+.guide{
+    max-width: 980px;
+    margin: 0 auto;
+    padding: 3rem 1.5rem 5rem;
+    display: grid;
+    gap: 2.5rem;
+}
+
+.guide__section{
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 1.25rem;
+    padding: 2rem;
+    display: grid;
+    gap: 1.25rem;
+    box-shadow: 0 12px 30px -24px rgba(15, 23, 42, 0.3);
+}
+
+.guide__section h2{
+    font-size: 1.45rem;
+}
+
+.guide__section p{
+    color: var(--muted);
+}
+
+.note{
+    border: 1px dashed #cbd5f5;
+    background: #f8fafc;
+    border-radius: 1rem;
+    padding: 1.2rem 1.4rem;
+    display: grid;
+    gap: 0.75rem;
+}
+
+.demo-card{
+    border: 1px solid var(--border);
+    border-radius: 1rem;
+    padding: 1.5rem;
+    display: grid;
+    gap: 1rem;
+    transition: all 0.3s ease;
+    background: #f8fafc;
+}
+
+.demo-card__header h3{
+    margin: 0.3rem 0;
+}
+
+.demo-card__badge{
+    display: inline-flex;
+    align-items: center;
+    font-size: 0.8rem;
+    padding: 0.3rem 0.6rem;
+    border-radius: 999px;
+    background: #e0f2fe;
+    color: #0369a1;
+    font-weight: 600;
+}
+
+.demo-switch{
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    font-weight: 600;
+    color: var(--text);
+}
+
+.demo-switch input{
+    width: 1.1rem;
+    height: 1.1rem;
+    cursor: pointer;
+}
+
+.demo-card:has(.demo-toggle:checked){
+    border-color: var(--accent);
+    background: #dbeafe;
+    box-shadow: 0 16px 35px -25px rgba(59, 130, 246, 0.6);
+}
+
+.demo-card:has(.demo-toggle:checked) .demo-card__badge{
+    background: var(--accent);
+    color: #fff;
+}
+
+.profile-card{
+    border: 1px solid var(--border);
+    border-radius: 1.2rem;
+    overflow: hidden;
+    background: #f8fafc;
+    display: grid;
+    grid-template-columns: 160px 1fr;
+    transition: all 0.3s ease;
+}
+
+.profile-card__img{
+    width: 160px;
+    height: 160px;
+    object-fit: cover;
+}
+
+.profile-card__body{
+    padding: 1.5rem;
+    display: grid;
+    gap: 0.75rem;
+}
+
+.profile-card:has(.size-toggle:checked){
+    background: #e0f2fe;
+    grid-template-columns: 1fr;
+}
+
+.profile-card:has(.size-toggle:checked) .profile-card__img{
+    width: 100%;
+    height: 220px;
+    border-radius: 0;
+}
+
+.focus-card{
+    border: 1px solid var(--border);
+    border-radius: 1rem;
+    padding: 1.6rem;
+    display: grid;
+    gap: 1rem;
+    background: #f8fafc;
+    transition: all 0.3s ease;
+}
+
+.focus-card__label{
+    font-weight: 600;
+}
+
+.focus-card input{
+    padding: 0.8rem 1rem;
+    border-radius: 0.8rem;
+    border: 1px solid var(--border);
+    font: inherit;
+    width: 100%;
+}
+
+.focus-card button{
+    padding: 0.8rem 1.2rem;
+    border: none;
+    border-radius: 0.8rem;
+    background: var(--accent-strong);
+    color: #fff;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.focus-card button:hover{
+    opacity: 0.9;
+}
+
+.focus-card__status{
+    display: grid;
+    gap: 0.25rem;
+    font-size: 0.95rem;
+}
+
+.status{
+    color: var(--muted);
+    opacity: 1;
+    transition: opacity 0.3s ease;
+}
+
+.status--valid{
+    color: var(--success);
+    opacity: 0;
+}
+
+.focus-card:has(input:focus){
+    border-color: var(--accent);
+    background: #eef2ff;
+}
+
+.focus-card:has(input:valid){
+    border-color: var(--success);
+    background: #ecfdf5;
+}
+
+.focus-card:has(input:valid) .status--valid{
+    opacity: 1;
+}
+
+.focus-card:has(input:valid) .status--idle{
+    opacity: 0;
+}
+
+@media (max-width: 720px){
+    .profile-card{
+        grid-template-columns: 1fr;
     }
 
+    .profile-card__img{
+        width: 100%;
+        height: 200px;
+    }
 }
-
-
-
-img{
-    width: 300px;
-}
-
-
-
-
-
-
-
-
-/* Cards */
-
-.cards{
-    margin: 80px;
-    display: grid;
-    gap: 2rem;
-}
-
-.card{
-    overflow: hidden;
-    border-radius: 6px;
-    text-align: center;
-    width: 300px;
-    padding: 2rem;
-    background-color: #ccf5f5;
-    box-shadow: 0 0 6px -3px;
-}
-
-.card:has( .card__img--large ){
-    background-color: teal;
-    padding: 0;
-    padding-bottom: 2rem;
-}
-
-.card__img{
-    display: block;
-    margin: 0 auto;
-    width: 100px;
-    aspect-ratio: 1/1;
-    object-fit: cover;
-    border-radius: 50%;
-}
-
-.card__img--large{
-    aspect-ratio: unset;
-    width: 100%;
-    height: 200px;
-    border-radius: 0px;
-}
-
-.card__title{
-    margin-top: 1.4rem;
-}
-
-/* Form */
-
-.form{
-    margin: 300px auto;
-    width: min(600px, 90%);
-    padding: 3rem 1.5rem;
-    border: 4px solid cornflowerblue;
-
-
-}
-
-/*
-.form:has(> input:checked, [type="email"]:focus,  [type="email"]:placeholder-shown ){
-    background-color: seagreen;
-}
-*/
-
-.form input{
-    display: inline-block;
-    font: inherit;
-}
-
-/*
-[type="email"]:has(~ [type="checkbox"]:checked){
-    background-color: crimson;
-}
-*/
