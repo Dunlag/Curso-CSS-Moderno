@@ -1,0 +1,25 @@
+*, ::after, ::before{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+section{
+    margin: auto;
+    background-color: seagreen;
+}
+
+section::backdrop{
+    background-color: #0000006f;
+}
+
+section:popover-open{
+    background-color: red;
+}
+
+section:popover-open::backdrop{
+    background-color: seagreen;
+}
