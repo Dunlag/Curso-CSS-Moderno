@@ -1,0 +1,238 @@
+*, ::after, ::before{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{   
+    font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+/** Card **/
+
+.card__container{
+    container-type: size;
+
+    position: relative;
+    margin: 80px auto;
+    border: 1px solid;
+    width: 300px;
+    height: 300px;
+
+    
+    resize: both;
+    overflow: hidden;
+}
+
+
+.card__container::before{
+    content: attr(data-size);
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+
+    background-color: #000;
+    color: white;
+    padding: 1rem;
+}
+
+.card__img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.card__text{
+    display: grid;
+    gap: 1rem;
+    padding: 30px 5%;
+}
+
+.card__title{
+    font-size: clamp(18px, 5vw + 10px, 36px);
+
+    @container (min-width: 200px){
+        font-size: clamp(16px, 5cqw + 10px ,40px);
+    }
+
+    /*
+
+    - cqw: 1% del ancho del contenedor actual.
+
+    - cqh: 1% del alto del contenedor actual.
+
+    - cqi: 1% del inline-size (equivalente al ancho por defecto)
+
+    - cqb: 1% del block-size (equivalente al alto por defecto)
+    
+    - cqmin: El valor más pequeño entre cqi y cqb (o el 1% más pequeño del ancho o del alto).
+    - cqmax: El valor más grande entre cqi y cqb (o el 1% más grande del ancho o del alto)    
+
+    */
+}
+
+.card__btn{
+    width: max-content;
+    text-decoration: none;
+    background-color: purple;
+    color: white;
+    padding: 1rem 2rem;
+    border-radius: 10px;
+}
+
+
+
+.card__container--small{
+    width: 400px;
+}
+
+
+/** Icon **/
+
+.icon{
+    container: icono  icono-musica / inline-size;
+
+    resize: horizontal;
+    overflow: hidden;
+
+
+    margin: 0 auto;
+    width: 300px;
+}
+
+.icon__container{
+    display: grid;
+    justify-items: center;
+    gap: 1rem;
+    border: 1px solid;
+    border-radius: 10px;
+    padding: 1rem;
+}
+
+.icon__name{
+    text-align: center;
+    font-size: clamp(24px, 6vw, 36px);
+}
+
+.icon__img{
+    display: block;
+    width: 80px;
+}
+
+
+/** Shop Button **/
+
+
+.shop{
+    container-type: normal;
+    container-name: icono-shop;
+    --theme: black;
+
+    display: block;
+    width: 90%;
+    max-width: 250px;
+    margin: 80px auto;
+
+    border: none;
+    color: white;
+    background-color: royalblue;
+    font: inherit;
+
+    overflow: hidden;
+    resize: horizontal;
+}
+
+.shop__container{
+
+
+    width: 100%;
+    display: flex;
+    gap: 1rem;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 1rem .6rem;
+    
+    transition: scale .3s;
+    &:active{
+        scale: 1.1;
+    }
+}
+
+/** -- Style Querie --**/
+
+@container style( --theme: black ){
+    .shop__img{
+        display: none;
+    }
+    
+}
+
+
+
+/** -- Style Querie --**/
+
+@container (min-width:500px){
+
+    .card__item{
+        display: flex;
+    }
+
+    .card__figure{
+        width: 50%;
+    }
+
+    .card__text{
+        width: 50%;
+    }
+
+}
+
+@container icono (min-width: 500px){
+    .icon__container{
+        grid-auto-flow: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+@container (min-width: 800px){
+
+    .card__item{
+        display: grid;
+        grid-template-areas: "img";
+    }
+
+    .card__figure{
+        grid-area: img;
+        width: 100%;
+        height: 100%;
+        position: relative;
+
+        &::after{
+            content: "";
+            position: absolute;
+            inset: 0;
+            background-color: #00000082;
+        }
+    }
+
+    .card__text{
+        grid-area: img;
+        z-index: 100;
+
+        width: 100%;
+        height: 100%;
+
+        gap: 1rem;
+        justify-content: center;
+        align-content: center;
+
+        text-align: center;
+        color: white;
+    }
+
+    .card__btn{
+        margin: 0 auto;
+    }
+
+}
