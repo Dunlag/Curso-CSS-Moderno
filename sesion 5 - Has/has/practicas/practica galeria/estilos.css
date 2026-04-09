@@ -33,7 +33,7 @@ body {
 }
 
 .filters:has([id="gato"]:checked){
-    --perro: none;
+  --perro: none;
   --pantera: none;
   --gato: block;
 }
