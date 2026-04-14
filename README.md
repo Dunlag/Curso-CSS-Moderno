@@ -4,9 +4,21 @@ Coleccion de proyectos y demos de CSS moderno reorganizada como portfolio. El re
 
 ## Punto de entrada
 
-- Landing visual: [index.html](C:\Users\FernandoPinillaValbu\Documents\proyectos\Proyectos\Curso-CSS-Moderno\index.html)
-- Estilos de la landing: [styles.css](C:\Users\FernandoPinillaValbu\Documents\proyectos\Proyectos\Curso-CSS-Moderno\styles.css)
-- Indice visual y acceso rapido a demos: abre `index.html` en el navegador
+- Landing visual: [`index.html`](./index.html)
+- Estilos principales de la landing: [`styles.css`](./styles.css)
+- Script de animaciones ligeras: [`script.js`](./script.js)
+
+Si publicas este repositorio con GitHub Pages, `index.html` puede funcionar como portada publica del portfolio.
+
+## Publicacion con GitHub Pages
+
+1. Sube el repositorio a GitHub.
+2. Entra en `Settings > Pages`.
+3. En `Build and deployment`, elige `Deploy from a branch`.
+4. Selecciona la rama principal y la carpeta `/ (root)`.
+5. Guarda la configuracion y espera a que GitHub genere la URL publica.
+
+Como la landing esta hecha con HTML, CSS y JavaScript estatico, no necesita build ni dependencias para publicarse.
 
 ## Estructura actual
 
@@ -80,5 +92,12 @@ Material antiguo que se conserva como contexto del curso original.
 - Los proyectos mas fuertes estan separados de las demos tecnicas.
 - Las variantes o experimentos agrupados viven dentro de una coleccion, no como carpetas sueltas en raiz.
 - Los recursos y el contexto historico estan apartados para no mezclar material de apoyo con piezas de muestra.
+
+## Uso recomendado
+
+- Si quieres enseñar el repo, empieza por la landing `index.html` o por `01-proyectos-destacados`.
+- Si buscas piezas concretas para reutilizar, entra en `02-componentes-y-patrones`.
+- Si quieres revisar tecnicas modernas de layout, entra en `03-layouts-y-responsive`.
+- Si quieres ejemplos de movimiento o microinteraccion, entra en `04-animaciones-e-interacciones`.
 
 
