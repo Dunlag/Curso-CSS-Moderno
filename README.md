@@ -1,35 +1,51 @@
 # Portfolio de CSS Moderno
 
-Repositorio reorganizado para acceder rapido a los proyectos mas utiles del curso y usarlo como coleccion de ejemplos de CSS moderno.
+Coleccion de proyectos y demos de CSS moderno reorganizada como portfolio. El repositorio ya no esta ordenado por sesiones del curso, sino por tipos de piezas para acceder rapido a ejemplos reutilizables y proyectos visuales.
 
-## Estructura
+## Punto de entrada
+
+- Landing visual: [index.html](C:\Users\FernandoPinillaValbu\Documents\proyectos\Proyectos\Curso-CSS-Moderno\index.html)
+- Estilos de la landing: [styles.css](C:\Users\FernandoPinillaValbu\Documents\proyectos\Proyectos\Curso-CSS-Moderno\styles.css)
+- Indice visual y acceso rapido a demos: abre `index.html` en el navegador
+
+## Estructura actual
 
 ### 01-proyectos-destacados
 
-Proyectos mas visuales o mas completos para enseñar piezas de portfolio.
+Piezas mas completas o mas vendibles para enseñar el portfolio.
 
-- `card-animada`
-- `dialog-ui`
-- `formulario-moderno`
 - `hero-responsive`
-- `layout-aside-editorial`
+- `formulario-moderno`
+- `dialog-ui`
 - `popover-ui`
+- `layout-aside-editorial`
+- `card-animada`
 
 ### 02-componentes-y-patrones
 
-Componentes reutilizables y patrones de interfaz.
+Componentes concretos de interfaz y patrones reutilizables.
 
-- `boton-toggle`
-- `faq-accordion`
-- `formulario-visual-alt`
 - `input-floating-label`
-- `loader-css`
+- `formulario-visual-alt`
+- `boton-toggle`
 - `menu-animado-css`
+- `faq-accordion`
+- `loader-css`
 - `menus-y-patrones-con-has`
+
+Subdemos dentro de `menus-y-patrones-con-has`:
+
+- `filtro-has`
+- `galeria-filtrable`
+- `menu dropdown animado`
+- `menu-animado`
+- `menu-animado-alternativo`
+- `menu-dropdown`
+- `menu-dropdown-animado`
 
 ### 03-layouts-y-responsive
 
-Ejemplos centrados en composicion, nesting y responsive moderno.
+Demos tecnicas centradas en composicion y responsive moderno.
 
 - `container-queries-demo`
 - `nesting-css-demo`
@@ -37,22 +53,22 @@ Ejemplos centrados en composicion, nesting y responsive moderno.
 
 ### 04-animaciones-e-interacciones
 
-Demos enfocadas en movimiento, feedback visual e interaccion.
+Ejemplos donde el foco esta en movimiento, feedback visual e interaccion.
 
 - `background-motion`
 - `custom-properties-demo`
-- `icon-animation`
 - `message-animation`
+- `icon-animation`
 
 ### 90-recursos
 
-Recursos visuales y assets de apoyo del curso.
+Recursos visuales y assets de apoyo.
 
 - `recursos-curso`
 
 ### 99-archivo-curso
 
-Restos utiles de la estructura original del curso que se conservan por contexto.
+Material antiguo que se conserva como contexto del curso original.
 
 - `sesion-3-contexto`
 - `sesion-5-contexto`
@@ -60,14 +76,9 @@ Restos utiles de la estructura original del curso que se conservan por contexto.
 
 ## Criterio de organizacion
 
-- La parte visible del repo ya no esta ordenada por sesiones.
-- Los proyectos mas vendibles estan arriba y separados de demos tecnicas.
-- Los recursos comunes y el material historico quedan apartados para no ensuciar la raiz.
+- La raiz muestra solo las carpetas principales del portfolio.
+- Los proyectos mas fuertes estan separados de las demos tecnicas.
+- Las variantes o experimentos agrupados viven dentro de una coleccion, no como carpetas sueltas en raiz.
+- Los recursos y el contexto historico estan apartados para no mezclar material de apoyo con piezas de muestra.
 
-## Siguiente mejora recomendada
 
-Si quieres llevarlo a formato portfolio de verdad, el siguiente paso logico es:
-
-- añadir una captura `preview.png` a cada proyecto destacado
-- normalizar nombres internos de archivos (`index.html`, `styles.css`, `README.md`)
-- crear una landing indice que enlace a todos los ejemplos desde el navegador
