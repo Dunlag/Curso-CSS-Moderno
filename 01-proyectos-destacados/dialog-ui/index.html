@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dialog UI | CSS Moderno</title>
+    <link rel="stylesheet" href="./estilos.css" />
+    <link rel="stylesheet" href="../../portfolio-demo.css" />
+</head>
+
+<body>
+    <section class="portfolio-bar">
+        <div class="portfolio-bar__top">
+            <a class="portfolio-bar__back" href="../../index.html">Volver al portfolio</a>
+            <p class="portfolio-bar__eyebrow">Proyectos destacados</p>
+        </div>
+        <strong class="portfolio-bar__title">Dialog UI</strong>
+        <p class="portfolio-bar__summary">Uso de dialog nativo con una presentación limpia, útil para modales y bloques de interacción accesible.</p>
+        <ul class="portfolio-bar__meta">
+            <li>HTML dialog</li>
+            <li>Interacción nativa</li>
+            <li>UI patterns</li>
+        </ul>
+    </section>
+    <button class="btn">Abrir modal</button>
+
+    <dialog class="modal">
+        <h2 class="modal__title">¡Soy un modal!</h2>
+
+        <img src="./illustration.svg" class="modal__img" />
+
+        <button class="modal__close">X</button>
+    </dialog>
+
+    <script>
+        const modal = document.querySelector(".modal");
+        const btnOpen = document.querySelector(".btn");
+        const btnClose = document.querySelector(".modal__close");
+
+        btnOpen.addEventListener("click", () => {
+            modal.showModal();
+        });
+
+        btnClose.addEventListener("click", () => {
+            modal.close();
+        });
+    </script>
+</body>
+
+</html>

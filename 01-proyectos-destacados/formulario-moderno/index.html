@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario Moderno | CSS Moderno</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="../../portfolio-demo.css">
+</head>
+<body>
+  <section class="portfolio-bar">
+    <div class="portfolio-bar__top">
+      <a class="portfolio-bar__back" href="../../index.html">Volver al portfolio</a>
+      <p class="portfolio-bar__eyebrow">Proyectos destacados</p>
+    </div>
+    <strong class="portfolio-bar__title">Formulario moderno</strong>
+    <p class="portfolio-bar__summary">Formulario visual orientado a producto, con jerarquía clara, foco en usabilidad y una presentación lista para portfolio.</p>
+    <ul class="portfolio-bar__meta">
+      <li>Forms UI</li>
+      <li>UX visual</li>
+      <li>Accesos claros</li>
+    </ul>
+  </section>
+  <main class="wrapper">
+    <h1 class="title">Formulario básico</h1>
+
+    <form class="form">
+      <label for="name" class="label">
+        <input type="text" placeholder=" " class="input" id="name" name="name" required>
+        <span class="label__name">Nombre completo</span>
+      </label>
+
+      <label for="email" class="label">
+        <input type="email" placeholder=" " class="input" id="email" name="email" required>
+        <span class="label__name">Correo electrónico</span>
+      </label>
+
+      <label for="phone" class="label">
+        <input type="tel" placeholder=" " class="input" id="phone" name="phone" pattern="[0-9+\-\s]{7,}" required>
+        <span class="label__name">Teléfono</span>
+      </label>
+
+
+
+      <div class="form__actions">
+        <button type="reset" class="btn btn--secondary">Limpiar</button>
+        <button type="submit" class="btn btn--primary">Enviar</button>
+      </div>
+    </form>
+  </main>
+</body>
+</html>

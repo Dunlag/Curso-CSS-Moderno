@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+ 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Container Queries Demo | CSS Moderno</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./estilos.css">
+    <link rel="stylesheet" href="../../portfolio-demo.css">
+</head>
+
+<body>
+    <section class="portfolio-bar">
+        <div class="portfolio-bar__top">
+            <a class="portfolio-bar__back" href="../../index.html">Volver al portfolio</a>
+            <p class="portfolio-bar__eyebrow">Layouts y responsive</p>
+        </div>
+        <strong class="portfolio-bar__title">Container queries demo</strong>
+        <p class="portfolio-bar__summary">Colección de componentes que cambian según el espacio disponible del contenedor en lugar del viewport.</p>
+        <ul class="portfolio-bar__meta">
+            <li>Container queries</li>
+            <li>Component design</li>
+            <li>Responsive moderno</li>
+        </ul>
+    </section>
+
+
+    <!-- card -->
+    <div class="card__container"  data-size="">
+        <article class="card__item" >
+
+            <figure class="card__figure">
+                <img src="./assets/nesting.png" class="card__img">
+            </figure>
+
+            <div class="card__text">
+                <h2 class="card__title">¡Titulo de mi card!</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis, aliquam!</p>
+
+                <a href="#" class="card__btn">¡Agrega aquí!</a>
+            </div>
+
+        </article>
+    </div>
+
+    <div class="card__container "  data-size="">
+        <article class="card__item" >
+            
+            <figure class="card__figure">
+                <img src="./assets/nesting.png" class="card__img">
+            </figure>
+
+            <div class="card__text">
+                <h2 class="card__title">¡Titulo de mi card!</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis, aliquam!</p>
+
+                <a href="#" class="card__btn">¡Agrega aquí!</a>
+            </div>
+
+        </article>
+    </div>
+
+    <!-- icon -->
+    <div class="icon">
+        <article class="icon__container">
+            <h3 class="icon__name">¡Apple Music!</h3>
+            <img src="./assets/icon-music.svg" class="icon__img">
+        </article>
+    </div>
+
+    <!-- button -->
+    <button class="shop">
+        <span class="shop__container">
+            <img src="./assets/shop.svg" class="shop__img">
+            <span class="shop__text">Agregar al carrito</span>
+        </span>
+    </button>
+
+
+    <script>
+        const card = document.querySelector(".card__container");
+        card.dataset.size = card.offsetWidth + "px";
+
+        const cardObserver = new ResizeObserver(entries => {
+            card.dataset.size = card.offsetWidth + "px";
+        });
+
+        cardObserver.observe(card);
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Galería Filtrable con :has() | CSS Moderno</title>
+    <link rel="stylesheet" href="estilos.css" />
+    <link rel="stylesheet" href="../../../portfolio-demo.css">
+</head>
+<body>
+    <section class="portfolio-bar">
+        <div class="portfolio-bar__top">
+            <a class="portfolio-bar__back" href="../../../index.html">Volver al portfolio</a>
+            <p class="portfolio-bar__eyebrow">Colección con :has()</p>
+        </div>
+        <strong class="portfolio-bar__title">Galería filtrable con :has()</strong>
+        <p class="portfolio-bar__summary">Versión alternativa de galería con categorías visuales, pensada como demo rápida de filtrado sin JavaScript.</p>
+        <ul class="portfolio-bar__meta">
+            <li>:has()</li>
+            <li>Gallery filter</li>
+            <li>Pure CSS</li>
+        </ul>
+    </section>
+    <section class="filters">
+      <h2 class="filters__title">Imagenes de Mascotas</h2>
+
+      <div class="filters__buttons">
+        <label class="filters__label">
+          <input type="radio" name="mascota" checked />
+          Todos
+        </label>
+
+        <label class="filters__label">
+          <input type="radio" name="mascota" id="perro" />
+          Perros
+        </label>
+
+        <label class="filters__label">
+          <input type="radio" name="mascota" id="gato" />
+          Gatos
+        </label>
+
+        <label class="filters__label">
+          <input type="radio" name="mascota" id="pantera" />
+          Panteras
+        </label>
+      </div>
+
+      <section class="gallery">
+        <img
+          src="./img/perro1.jpg"
+          alt="perro"
+          class="gallery__img"
+          data-perro
+        />
+
+        <img
+          src="./img/perro2.jpg"
+          alt="perro"
+          class="gallery__img"
+          data-perro
+        />
+
+        <img
+          src="./img/perro3.jpg"
+          alt="perro"
+          class="gallery__img"
+          data-perro
+        />
+
+        <img
+          src="./img/pantera1.jpg"
+          alt="pantera"
+          class="gallery__img"
+          data-pantera
+        />
+
+        <img
+          src="./img/pantera2.jpg"
+          alt="pantera"
+          class="gallery__img"
+          data-pantera
+        />
+
+        <img
+          src="./img/pantera3.jpg"
+          alt="pantera"
+          class="gallery__img"
+          data-pantera
+        />
+
+        <img
+          src="./img/gato1.jpg"
+          alt="gato"
+          class="gallery__img"
+          data-gato />
+
+        <img
+          src="./img/gato2.jpg"
+          alt="gato"
+          class="gallery__img"
+          data-gato
+        />
+
+        <img
+          src="./img/gato3.jpg"
+          alt="gato"
+          class="gallery__img"
+          data-gato
+        />
+      </section>
+    </section>
+  </body>
+</html>

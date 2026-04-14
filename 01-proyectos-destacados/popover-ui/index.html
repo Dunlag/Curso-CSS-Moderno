@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Popover UI | CSS Moderno</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./estilos.css">
+    <link rel="stylesheet" href="../../portfolio-demo.css">
+</head>
+<body>
+    <section class="portfolio-bar">
+        <div class="portfolio-bar__top">
+            <a class="portfolio-bar__back" href="../../index.html">Volver al portfolio</a>
+            <p class="portfolio-bar__eyebrow">Proyectos destacados</p>
+        </div>
+        <strong class="portfolio-bar__title">Popover UI</strong>
+        <p class="portfolio-bar__summary">Microinteracción compacta basada en popover para mostrar ayuda contextual y contenido auxiliar sin romper el flujo.</p>
+        <ul class="portfolio-bar__meta">
+            <li>Popover API</li>
+            <li>Micro UX</li>
+            <li>Interacción ligera</li>
+        </ul>
+    </section>
+
+    <button popovertarget="idpop" class="btn-popover">Mostrar el popover</button>
+
+    <article id="idpop" popover class="popover">
+        
+        <div class="popover__content">
+            <h2 class="popover__title">¡Bienvenido a mi contenido interactivo!</h2>
+            <img src="./illustration-switch.svg" class="popover__img">
+        </div>
+
+    </article>
+
+
+</body>
+</html>

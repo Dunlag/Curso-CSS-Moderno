@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio CSS Moderno</title>
+  <meta name="description" content="Coleccion visual de proyectos y demos de CSS moderno organizados como portfolio.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Syne:wght@500;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="page-shell">
+    <header class="topbar">
+      <a class="brand" href="#inicio">
+        <span class="brand-mark"></span>
+        <span>CSS Moderno</span>
+      </a>
+
+      <nav class="topnav" aria-label="Secciones principales">
+        <a href="#destacados">Destacados</a>
+        <a href="#colecciones">Colecciones</a>
+        <a href="#lanzador">Lanzador</a>
+      </nav>
+    </header>
+
+    <main id="inicio">
+      <section class="hero">
+        <div class="hero-media">
+          <img src="90-recursos/recursos-curso/assets/bg-laptop.jpg" alt="Pantalla de trabajo como fondo del portfolio CSS">
+        </div>
+
+        <div class="hero-copy reveal">
+          <p class="eyebrow">Portfolio de ejemplos front-end</p>
+          <h1>CSS moderno convertido en una biblioteca visual de demos reales.</h1>
+          <p class="hero-text">
+            Esta portada concentra las piezas mas fuertes del curso: formularios, layouts responsive,
+            animaciones, componentes interactivos y patrones listos para reutilizar.
+          </p>
+
+          <div class="hero-actions">
+            <a class="button button-primary" href="#destacados">Ver proyectos</a>
+            <a class="button button-ghost" href="README.md">Abrir indice textual</a>
+          </div>
+
+          <ul class="hero-facts" aria-label="Resumen del portfolio">
+            <li>
+              <strong>20+</strong>
+              <span>demos enlazadas desde una sola portada</span>
+            </li>
+            <li>
+              <strong>4</strong>
+              <span>bloques tematicos para navegar rapido</span>
+            </li>
+            <li>
+              <strong>100%</strong>
+              <span>HTML y CSS accesibles sin dependencias</span>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="destacados" class="section section-contrast reveal">
+        <div class="section-head">
+          <p class="eyebrow">Selección principal</p>
+          <h2>Los proyectos que mejor resumen lo que sabes construir.</h2>
+        </div>
+
+        <div class="featured-list" role="list">
+          <a class="featured-item" href="01-proyectos-destacados/hero-responsive/index.html" target="_blank" rel="noopener noreferrer">
+            <span class="featured-index">01</span>
+            <span class="featured-body">
+              <strong>Hero responsive</strong>
+              <span>Composicion de portada, ritmo tipografico e imagen como ancla visual.</span>
+            </span>
+            <span class="featured-tag">Layout</span>
+          </a>
+
+          <a class="featured-item" href="01-proyectos-destacados/formulario-moderno/index.html" target="_blank" rel="noopener noreferrer">
+            <span class="featured-index">02</span>
+            <span class="featured-body">
+              <strong>Formulario moderno</strong>
+              <span>Jerarquia visual, inputs claros y acabados listos para producto.</span>
+            </span>
+            <span class="featured-tag">UI</span>
+          </a>
+
+          <a class="featured-item" href="01-proyectos-destacados/dialog-ui/index.html" target="_blank" rel="noopener noreferrer">
+            <span class="featured-index">03</span>
+            <span class="featured-body">
+              <strong>Dialog UI</strong>
+              <span>Uso practico de dialog nativo con una presentacion cuidada.</span>
+            </span>
+            <span class="featured-tag">Interaccion</span>
+          </a>
+
+          <a class="featured-item" href="01-proyectos-destacados/popover-ui/index.html" target="_blank" rel="noopener noreferrer">
+            <span class="featured-index">04</span>
+            <span class="featured-body">
+              <strong>Popover UI</strong>
+              <span>Patron ligero para ayudas contextuales y microinteraccion.</span>
+            </span>
+            <span class="featured-tag">UX</span>
+          </a>
+
+          <a class="featured-item" href="01-proyectos-destacados/layout-aside-editorial/index.html" target="_blank" rel="noopener noreferrer">
+            <span class="featured-index">05</span>
+            <span class="featured-body">
+              <strong>Layout aside editorial</strong>
+              <span>Estructura de contenido con caracter y equilibrio visual.</span>
+            </span>
+            <span class="featured-tag">Editorial</span>
+          </a>
+
+          <a class="featured-item" href="01-proyectos-destacados/card-animada/index.html" target="_blank" rel="noopener noreferrer">
+            <span class="featured-index">06</span>
+            <span class="featured-body">
+              <strong>Card animada</strong>
+              <span>Transiciones y respuesta al hover para interfaces con mas presencia.</span>
+            </span>
+            <span class="featured-tag">Motion</span>
+          </a>
+        </div>
+      </section>
+
+      <section id="colecciones" class="section reveal">
+        <div class="section-head">
+          <p class="eyebrow">Mapa del repositorio</p>
+          <h2>Colecciones organizadas para abrir demos sin buscar entre sesiones.</h2>
+        </div>
+
+        <div class="collection-grid">
+          <article class="collection">
+            <p class="collection-label">01</p>
+            <h3>Proyectos destacados</h3>
+            <p>La capa mas vendible del repositorio: piezas visuales, completas y faciles de enseñar.</p>
+            <ul class="link-list">
+              <li><a href="01-proyectos-destacados/hero-responsive/index.html" target="_blank" rel="noopener noreferrer">Hero responsive</a></li>
+              <li><a href="01-proyectos-destacados/formulario-moderno/index.html" target="_blank" rel="noopener noreferrer">Formulario moderno</a></li>
+              <li><a href="01-proyectos-destacados/dialog-ui/index.html" target="_blank" rel="noopener noreferrer">Dialog UI</a></li>
+              <li><a href="01-proyectos-destacados/popover-ui/index.html" target="_blank" rel="noopener noreferrer">Popover UI</a></li>
+              <li><a href="01-proyectos-destacados/layout-aside-editorial/index.html" target="_blank" rel="noopener noreferrer">Layout aside editorial</a></li>
+              <li><a href="01-proyectos-destacados/card-animada/index.html" target="_blank" rel="noopener noreferrer">Card animada</a></li>
+            </ul>
+          </article>
+
+          <article class="collection">
+            <p class="collection-label">02</p>
+            <h3>Componentes y patrones</h3>
+            <p>Elementos concretos de interfaz para formularios, menus, loaders y estados interactivos.</p>
+            <ul class="link-list">
+              <li><a href="02-componentes-y-patrones/input-floating-label/index.html" target="_blank" rel="noopener noreferrer">Input floating label</a></li>
+              <li><a href="02-componentes-y-patrones/formulario-visual-alt/index.html" target="_blank" rel="noopener noreferrer">Formulario visual alternativo</a></li>
+              <li><a href="02-componentes-y-patrones/boton-toggle/index.html" target="_blank" rel="noopener noreferrer">Boton toggle</a></li>
+              <li><a href="02-componentes-y-patrones/menu-animado-css/index.html" target="_blank" rel="noopener noreferrer">Menu animado</a></li>
+              <li><a href="02-componentes-y-patrones/faq-accordion/index.html" target="_blank" rel="noopener noreferrer">FAQ accordion</a></li>
+              <li><a href="02-componentes-y-patrones/loader-css/index.html" target="_blank" rel="noopener noreferrer">Loader CSS</a></li>
+            </ul>
+          </article>
+
+          <article class="collection">
+            <p class="collection-label">03</p>
+            <h3>Layouts y responsive</h3>
+            <p>Demos tecnicas de composicion modernas para responsive mas controlado y mantenible.</p>
+            <ul class="link-list">
+              <li><a href="03-layouts-y-responsive/container-queries-demo/index.html" target="_blank" rel="noopener noreferrer">Container queries</a></li>
+              <li><a href="03-layouts-y-responsive/nesting-css-demo/index.html" target="_blank" rel="noopener noreferrer">Nesting CSS</a></li>
+              <li><a href="03-layouts-y-responsive/subgrid-demo/index.html" target="_blank" rel="noopener noreferrer">Subgrid</a></li>
+            </ul>
+          </article>
+
+          <article class="collection">
+            <p class="collection-label">04</p>
+            <h3>Animaciones e interacciones</h3>
+            <p>Movimiento, profundidad y feedback visual para interfaces con mas energia.</p>
+            <ul class="link-list">
+              <li><a href="04-animaciones-e-interacciones/background-motion/index.html" target="_blank" rel="noopener noreferrer">Background motion</a></li>
+              <li><a href="04-animaciones-e-interacciones/custom-properties-demo/index.html" target="_blank" rel="noopener noreferrer">Custom properties demo</a></li>
+              <li><a href="04-animaciones-e-interacciones/message-animation/index.html" target="_blank" rel="noopener noreferrer">Message animation</a></li>
+              <li><a href="04-animaciones-e-interacciones/icon-animation/index.html" target="_blank" rel="noopener noreferrer">Icon animation</a></li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section id="lanzador" class="section section-launcher reveal">
+        <div class="section-head">
+          <p class="eyebrow">Lanzador rapido</p>
+          <h2>Accesos directos a piezas concretas y a la colección con <code>:has()</code>.</h2>
+        </div>
+
+        <div class="launcher-shell">
+          <div class="launcher-main">
+            <a href="02-componentes-y-patrones/menus-y-patrones-con-has/filtro-has/index.html" target="_blank" rel="noopener noreferrer">Filtro con :has()</a>
+            <a href="02-componentes-y-patrones/menus-y-patrones-con-has/menu-dropdown/index.html" target="_blank" rel="noopener noreferrer">Menu dropdown</a>
+            <a href="02-componentes-y-patrones/menus-y-patrones-con-has/menu-dropdown-animado/index.html" target="_blank" rel="noopener noreferrer">Menu dropdown animado</a>
+            <a href="02-componentes-y-patrones/menus-y-patrones-con-has/menu-animado/index.html" target="_blank" rel="noopener noreferrer">Menu animado con :has()</a>
+            <a href="02-componentes-y-patrones/menus-y-patrones-con-has/galeria-filtrable/index.html" target="_blank" rel="noopener noreferrer">Galeria interactiva</a>
+            <a href="02-componentes-y-patrones/menus-y-patrones-con-has/menu-animado-alternativo/index.html" target="_blank" rel="noopener noreferrer">Menu animado alternativo</a>
+          </div>
+
+          <aside class="launcher-note">
+            <p class="launcher-kicker">Como usar esta portada</p>
+            <p>
+              Empieza por destacados si quieres enseñar el repo.
+              Usa colecciones si quieres abrir demos de una familia concreta.
+              El bloque de arriba concentra las variantes de <code>:has()</code> que antes estaban escondidas entre practicas.
+            </p>
+          </aside>
+        </div>
+      </section>
+
+      <section class="section final-cta reveal">
+        <p class="eyebrow">Siguiente paso</p>
+        <h2>La estructura ya funciona como portfolio. El siguiente salto es añadir previews y una breve ficha por proyecto.</h2>
+        <div class="hero-actions">
+          <a class="button button-primary" href="README.md">Revisar README</a>
+          <a class="button button-ghost" href="01-proyectos-destacados/hero-responsive/index.html" target="_blank" rel="noopener noreferrer">Abrir un ejemplo</a>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
